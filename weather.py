@@ -4,7 +4,7 @@ import requests
 import os
 load_dotenv()
 
-def get_current_weather(city="Damascus City"):
+def get_current_weather(city="Damascus"):
 
     request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=metric'
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # check for empty strings or string with only spaces
 
     if not bool(city.strip()):
-        city = "Damascus City"
+        city = "Damascus"
 
 
     weather_data = get_current_weather(city)
