@@ -16,7 +16,7 @@ def get_weather():
   # check for empty strings or string with only spaces
 
     if not bool(city.strip()):
-        city = "kansas city"
+        city = "Damascus city"
         
     weather_data = get_current_weather(city)
     # city is not found by API 
